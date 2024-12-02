@@ -5,6 +5,8 @@ const HAS_BREEDS = "1";
 
 export const apiLink = `${URL}?limit=${LIMIT}&has_breeds=${HAS_BREEDS}&api_key=${KEY}`;
 
+// https://api.thecatapi.com/v1/images/search?limit=10&has_breeds=1&api_key=live_3H0P5gLpYlRVspXYdZgndGhjKVNAnTR2Mv634ZpCjkAbdlW75qNWsgCKz7SaeJ9B
+
 export const catObject = (object) => ({
     adaptability: object.breeds[0].adaptability,
     affectionLevel: object.breeds[0].affection_level,
@@ -22,6 +24,10 @@ export const catObject = (object) => ({
     healthIssues: object.breeds[0].health_issues,
     hypoallergenic: object.breeds[0].hypoallergenic,
     id: object.breeds[0].id,
+    imgID: object.id,
+    imgWidth: object.width,
+    imgHeight: object.height,
+    imgURL: object.url,
     indoor: object.breeds[0].indoor,
     intelligence: object.breeds[0].intelligence,
     lap: object.breeds[0].lap,

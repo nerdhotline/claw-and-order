@@ -1,7 +1,7 @@
 import { createMachine, assign } from "xstate"
 
 
-export const fetchMachine = createMachine({
+export const FetchMachine = createMachine({
     id: 'fetchMachine',
     initial: 'idle',
     context: {
