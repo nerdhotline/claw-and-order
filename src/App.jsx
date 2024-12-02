@@ -1,20 +1,12 @@
-import { useState } from 'react'
 import './App.css'
+import CatFetch from './CatFetch';
 
-function App() {
-  const [count, setCount] = useState(0);
-
-  const identity = () => {
-    setCount(count);
-  }
-  
+function App() {  
   return (
     <>
       <h1>Claw & Order</h1>
       <div className="card">
-        <button onClick={identity}>
-          Fetch
-        </button>
+        <CatFetch/>
       </div>
       <p className="read-the-docs">
         Made by Kenneth Blake.
